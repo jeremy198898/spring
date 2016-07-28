@@ -1,0 +1,8 @@
+apply plugin: 'war'
+//apply plugin: 'idea'
+	
+//解决Gradle编译时出现： 编码GBK的不可映射字符
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+dependencies{
+}
