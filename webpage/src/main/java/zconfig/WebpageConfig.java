@@ -1,3 +1,5 @@
+package zconfig;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"controllers"})
+@ComponentScan(basePackages = {"controllers","beans","service"})
 public class WebpageConfig extends WebMvcConfigurerAdapter
 {
     @Bean

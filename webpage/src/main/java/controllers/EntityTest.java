@@ -1,5 +1,6 @@
 package controllers;
 
+import beans.BeanTest;
 import dao.IEntityTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,14 +16,19 @@ import service.EntityTestService;
 @RequestMapping("/entity")
 public class EntityTest
 {
+    @Autowired
+    private EntityTestService testService;
+
     //@Autowired
-    //private IEntityTest entityTest;
+    //private BeanTest beanTest;
 
     @RequestMapping(value = "test", method = RequestMethod.GET)
     public String test(ModelMap attr)
     {
-        //String test = entityTest.sayHi();
+        String test = testService.sayHi();
         //System.out.println(test);
+        //String test = beanTest.sayHi();
+        attr.addAttribute("name", test);
         return "test";
     }
 }
