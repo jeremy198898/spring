@@ -16,8 +16,8 @@ import service.EntityTestService;
 @RequestMapping("/entity")
 public class EntityTest
 {
-    @Autowired
-    private EntityTestService testService;
+    //@Autowired
+    //private EntityTestService testService;
 
     //@Autowired
     //private BeanTest beanTest;
@@ -25,10 +25,10 @@ public class EntityTest
     @RequestMapping(value = "test", method = RequestMethod.GET)
     public String test(ModelMap attr)
     {
-        String test = testService.sayHi();
+        //String test = testService.sayHi();
         //System.out.println(test);
         //String test = beanTest.sayHi();
-        attr.addAttribute("name", test);
+        //attr.addAttribute("name", test);
         return "test";
     }
 }

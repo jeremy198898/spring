@@ -13,39 +13,39 @@ import java.util.Properties;
 /**
  * Created by jeremy on 2016/8/3.
  */
-@Configuration
+//@Configuration
 public class ConfigPersistence
 {
-        @Bean
-        public LocalContainerEntityManagerFactoryBean entityManagerFactory()
-        {
-            LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-            em.setDataSource(MysqlDS());
-            em.setPackagesToScan();
-
-            JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-            em.setJpaVendorAdapter(vendorAdapter);
-            em.setJpaProperties(additionalProperties());
-
-            return em;
-        }
-
-    @Bean
-    public DataSource MysqlDS()
-    {
-        DriverManagerDataSource ds = new DriverManagerDataSource();
-        ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://207.46.138.122:3306/zzd");
-        ds.setUsername("jeremy");
-        ds.setPassword("e3,t6,P?");
-        return ds;
-    }
-
-    Properties additionalProperties()
-    {
-        Properties properties = new Properties();
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57InnoDBDialect");
-        return properties;
-    }
+//        @Bean
+//        public LocalContainerEntityManagerFactoryBean entityManagerFactory()
+//        {
+//            LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+//            em.setDataSource(MysqlDS());
+//            em.setPackagesToScan();
+//
+//            JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+//            em.setJpaVendorAdapter(vendorAdapter);
+//            em.setJpaProperties(additionalProperties());
+//
+//            return em;
+//        }
+//
+//    @Bean
+//    public DataSource MysqlDS()
+//    {
+//        DriverManagerDataSource ds = new DriverManagerDataSource();
+//        ds.setDriverClassName("com.mysql.jdbc.Driver");
+//        ds.setUrl("jdbc:mysql://207.46.138.122:3306/zzd");
+//        ds.setUsername("jeremy");
+//        ds.setPassword("e3,t6,P?");
+//        return ds;
+//    }
+//
+//    Properties additionalProperties()
+//    {
+//        Properties properties = new Properties();
+//        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57InnoDBDialect");
+//        return properties;
+//    }
 
 }

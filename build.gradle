@@ -20,6 +20,7 @@ subprojects{
         compile 'org.springframework:spring-webmvc:4.3.2.RELEASE'
 
 		// https://mvnrepository.com/artifact/org.springframework/spring-test
-		compile group: 'org.springframework', name: 'spring-test', version: '4.3.1.RELEASE'
+		compile group: 'org.springframework', name: 'spring-test', version: '4.3.2.RELEASE'
+
 	}
 }

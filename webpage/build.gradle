@@ -9,6 +9,6 @@ dependencies{
 
     //providedCompile project (':core')
 
-    compile project (':core')
+    //compile project (':core')
 
 }
