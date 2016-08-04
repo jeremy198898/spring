@@ -1,5 +1,7 @@
 package zconfig;
 
+import daoimpl.EntityTestImpl;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,9 +12,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"service"})
 public class BeanConfig {
 
-//    @Bean
-//    public EntityTestService entityTest()
-//    {
-//        return new EntityTestService();
-//    }
+    @Bean
+    public EntityTestImpl entityTest()
+    {
+        return new EntityTestImpl();
+    }
 }
