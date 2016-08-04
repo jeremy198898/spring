@@ -10,13 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class EntityTestService
 {
-    private IEntityTest entityTest;
-
     @Autowired
-    public EntityTestService(IEntityTest entityTest)
-    {
-        this.entityTest = entityTest;
-    }
+    private IEntityTest entityTest;
 
     public String sayHi()
     {

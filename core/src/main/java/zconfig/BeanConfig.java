@@ -10,4 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"service"})
 public class BeanConfig {
 
+//    @Bean
+//    public EntityTestService entityTest()
+//    {
+//        return new EntityTestService();
+//    }
 }

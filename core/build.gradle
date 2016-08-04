@@ -23,6 +23,5 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-orm
     compile group: 'org.springframework', name: 'spring-orm', version: '4.3.2.RELEASE'
 
-
 }
 
