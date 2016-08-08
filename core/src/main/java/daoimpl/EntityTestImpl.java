@@ -10,6 +10,6 @@ public class EntityTestImpl implements IEntityTest
     @Override
     public String sayHi()
     {
-        return "Hi,lady, how about dinner tonight!!";
+        return "Hi,lady, how about dinner tonight!! I really enjoy the moment with you!";
     }
 }

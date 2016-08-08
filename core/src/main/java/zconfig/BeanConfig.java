@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"service"})
 public class BeanConfig {
 
+    //显式配置
     @Bean
     public EntityTestImpl entityTest()
     {
