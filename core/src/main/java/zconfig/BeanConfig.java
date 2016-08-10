@@ -1,6 +1,6 @@
 package zconfig;
 
-import daoimpl.EntityTestImpl;
+import impl.EntityTestImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * Created by jeremy on 2016/8/4.
  */
 @Configuration
-@ComponentScan(basePackages = {"service"})
+@ComponentScan(basePackages = {"service", "impl"})
 public class BeanConfig {
 
     //显式配置

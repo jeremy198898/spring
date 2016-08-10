@@ -1,6 +1,6 @@
-package daoimpl;
+package impl;
 
-import dao.IEntityTest;
+import interfaces.IEntityTest;
 
 /**
  * Created by jeremy on 2016/8/4.

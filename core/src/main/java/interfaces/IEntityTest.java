@@ -1,4 +1,4 @@
-package dao;
+package interfaces;
 
 /**
  * Created by jeremy on 2016/8/3.

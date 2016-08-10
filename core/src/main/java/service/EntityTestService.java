@@ -1,6 +1,6 @@
 package service;
 
-import daoimpl.EntityTestImpl;
+import impl.EntityTestImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
