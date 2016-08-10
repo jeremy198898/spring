@@ -1,6 +1,6 @@
 package service;
 
-import interfaces.IService;
+import impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class ServiceTest
 {
     @Autowired
-    private IService service;
+    private ServiceImpl service;
 
     public void doit()
     {

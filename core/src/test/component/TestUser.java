@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import service.ServiceTest;
 import zconfig.BeanConfig;
 import zconfig.DataConfig;
-import zconfig.PersistenceConfig;
 
 /**
  * Created by jeremy on 2016/8/4.
