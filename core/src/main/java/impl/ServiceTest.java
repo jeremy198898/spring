@@ -4,14 +4,14 @@ import interfaces.IService;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by jeremy on 2016/8/10.
+ * Created by jeremy on 2016/8/11.
  */
 @Component
-public class ServiceImpl implements IService
+public class ServiceTest implements IService
 {
     @Override
     public void sayHi()
     {
-        System.out.println("Hello,you motherfucker!");
+        System.out.println("hello,you damn!");
     }
 }

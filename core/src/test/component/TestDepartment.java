@@ -1,12 +1,13 @@
 package component;
 
+import entity.Department;
 import entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import service.UserService;
+import service.DepartmentService;
 import zconfig.DaoConfig;
 import zconfig.PersistenceConfig;
 import zconfig.ServiceConfig;
@@ -18,33 +19,29 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ServiceConfig.class, PersistenceConfig.class, DaoConfig.class})
-public class TestUser
+public class TestDepartment
 {
     @Autowired
-    private UserService test;
+    private DepartmentService test;
 
     @Test
-    public void say()
+    public void add()
     {
-        test.sayHi();
+        test.add("市场部门");
+        System.out.println("Successfully added!");
     }
 
     @Test
     public void show()
     {
-        List<User> users = test.allUsers();
+        List<Department> departments = test.getAll();
         String s = "";
-        for (User user: users)
+        for (Department department: departments)
         {
-            s += user.getUsername()+" ";
+            s += department.getName()+" ";
         }
         System.out.println(s);
     }
 
-//    @Test
-//    public void add()
-//    {
-//        test.addUser();
-//        System.out.println("Successfully added!");
-//    }
+
 }

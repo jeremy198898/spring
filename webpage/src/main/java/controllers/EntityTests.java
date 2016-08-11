@@ -1,11 +1,14 @@
 package controllers;
 
+import entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import service.EntityTestService;
+import service.UserService;
+
+import java.util.List;
 
 /**
  * Created by jeremy on 2016/8/3.
@@ -15,14 +18,18 @@ import service.EntityTestService;
 public class EntityTests
 {
     @Autowired
-    private EntityTestService testService;
+    private UserService userService;
 
     @RequestMapping(value = "test", method = RequestMethod.GET)
     public String test(ModelMap attr)
     {
-        String test = testService.sayHi();
-        //String test = "Fuck";
-        attr.addAttribute("name", test);
+        List<User> users = userService.allUsers();
+        String s = "";
+        for (User user : users)
+        {
+            s +=user.getUsername()+" ";
+        }
+        attr.addAttribute("name", s);
         return "test";
     }
 }

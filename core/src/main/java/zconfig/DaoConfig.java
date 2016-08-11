@@ -8,8 +8,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages = {"dao"})
-
-public class DataConfig
+public class DaoConfig
 {
 
 }
