@@ -23,7 +23,7 @@ public class UserService
         userDao.sayHi();
     }
 
-    public List<User> showUser()
+    public List<User> allUsers()
     {
         return userDao.getAll();
     }
