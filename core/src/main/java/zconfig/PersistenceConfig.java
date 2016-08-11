@@ -1,11 +1,14 @@
 package zconfig;
 
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -44,11 +47,17 @@ public class PersistenceConfig
     }
 
     @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslationPostProcessor()
+    {
+        return new PersistenceExceptionTranslationPostProcessor();
+    }
+
+    @Bean
     public DataSource MysqlDS()
     {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://140.206.185.206:3306/zzd?useSSL=false");
+        ds.setUrl("jdbc:mysql://140.206.185.206:3306/zzd?useSSL=false&useUnicode=true&characterEncoding=utf-8");
         ds.setUsername("jeremy");
         ds.setPassword("e3,t6,P?");
         return ds;
