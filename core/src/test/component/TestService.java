@@ -5,14 +5,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import service.ServiceTest;
-import zconfig.BeanConfig;
+import impl.ServiceTest;
+import zconfig.OtherBeanConfig;
 
 /**
  * Created by jeremy on 2016/8/4.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = BeanConfig.class)
+@ContextConfiguration(classes = {OtherBeanConfig.class})
 public class TestService
 {
     @Autowired
@@ -21,6 +21,6 @@ public class TestService
     @Test
     public void say()
     {
-        test.doit();
+        test.sayHi();
     }
 }
