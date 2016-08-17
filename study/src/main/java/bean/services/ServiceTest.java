@@ -1,7 +1,6 @@
-package bean.service;
+package bean.services;
 
 import bean.beans.ServiceImpl;
-import bean.infs.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +10,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiceTest
 {
-    private ServiceImpl service;
-
     @Autowired
-    public void setService(ServiceImpl service)
-    {
-        this.service = service;
-    }
+    private ServiceImpl services;
+
+    //injection with setter
+//    @Autowired
+//    public void setService(ServiceImpl services)
+//    {
+//        this.services = services;
+//    }
 
     public void sayHi()
     {
-        service.sayHi();
+        services.sayHi();
     }
+
 }

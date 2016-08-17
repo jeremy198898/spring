@@ -14,11 +14,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TestAOP
 {
     //@Autowired
-    //private IService service;
+    //private IService services;
 
 //    @Test
 //    public void say()
 //    {
-//       //service.sayHi();
+//       //services.sayHi();
 //    }
 }

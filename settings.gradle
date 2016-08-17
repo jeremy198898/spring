@@ -3,7 +3,7 @@ include 'service', 'webapp'
 */
 
 include 'webpage'
-include 'service'
+include 'services'
 include 'utils'
 include 'core'
 include 'study'

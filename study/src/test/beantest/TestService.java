@@ -1,7 +1,7 @@
 package beantest;
 
-import bean.BeanConfig;
-import bean.service.ServiceTest;
+import bean.zconfig.BeanConfig;
+import bean.services.ServiceTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
