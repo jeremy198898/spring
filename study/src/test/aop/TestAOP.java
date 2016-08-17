@@ -1,4 +1,4 @@
-package aop;
+//package aop;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,10 +9,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Created by jeremy on 2016/8/4.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {Config.class})
-public class TestAOP
-{
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = {Config.class})
+//public class TestAOP
+//{
     //@Autowired
     //private IService services;
 
@@ -21,4 +21,4 @@ public class TestAOP
 //    {
 //       //services.sayHi();
 //    }
-}
+//}

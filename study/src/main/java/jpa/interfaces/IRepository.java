@@ -1,4 +1,4 @@
-package jpa.interfaces.jpa;
+package jpa.interfaces;
 
 import java.io.Serializable;
 import java.util.List;
