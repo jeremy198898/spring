@@ -2,6 +2,8 @@ package jpa.interfaces;
 
 import jpa.entity.User;
 
+import java.util.List;
+
 /**
  * Created by jeremy on 2016/8/17.
  */
@@ -12,4 +14,7 @@ public interface IUser extends IRepository<User>
     //此处UserDao的接口IUserDao不需要实现其他方法
 
     void sayHi();
+
+    List<User> findByName(String name);
+
 }

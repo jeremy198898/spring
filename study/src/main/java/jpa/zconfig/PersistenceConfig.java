@@ -27,6 +27,8 @@ public class PersistenceConfig
         {
             LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
             em.setDataSource(MysqlDS());
+            //这里如果不加Unitname 那么容器默认的 persistence unit name 为 default
+            em.setPersistenceUnitName("mysql");
             em.setPackagesToScan("jpa.entity");
 
             JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
