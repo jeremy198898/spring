@@ -36,8 +36,18 @@ public class ServiceUser
         user.create(userNew);
     }
 
-    public List<User> findByName(String name)
+    public boolean isExist(String username)
     {
-        return user.findByName(name);
+        List<User> userExist = user.findByName(username);
+        Integer num = userExist.size();
+        if (num > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 }
