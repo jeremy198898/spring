@@ -37,4 +37,21 @@ public class UserDao extends AbstractJPADao<User> implements IUser
         List<User> users = rs.setParameter(1,name).getResultList();
         return users;
     }
+
+    @Override
+    public String getPassword(String username)
+    {
+        List<User> user = findByName(username);
+        if (null != user)
+        {
+
+        }
+        else
+        {
+            return "";
+        }
+        return "";
+    }
+
+
 }

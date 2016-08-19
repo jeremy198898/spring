@@ -17,4 +17,6 @@ public interface IUser extends IRepository<User>
 
     List<User> findByName(String name);
 
+    String getPassword(String username);
+
 }

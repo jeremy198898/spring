@@ -1,7 +1,7 @@
 package beantest;
 
+import bean.inf.IService;
 import bean.zconfig.BeanConfig;
-import bean.services.ServiceTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TestService
 {
     @Autowired
-    private ServiceTest test;
+    private IService test;
 
     @Test
     public void say()

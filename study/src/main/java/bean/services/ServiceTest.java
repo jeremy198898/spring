@@ -1,6 +1,7 @@
 package bean.services;
 
-import bean.beans.ServiceImpl;
+import bean.inf.IHello;
+import bean.inf.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,10 +9,10 @@ import org.springframework.stereotype.Service;
  * Created by jeremy on 2016/8/16.
  */
 @Service
-public class ServiceTest
+public class ServiceTest implements IService
 {
     @Autowired
-    private ServiceImpl services;
+    private IHello hello;
 
     //injection with setter
 //    @Autowired
@@ -20,9 +21,11 @@ public class ServiceTest
 //        this.services = services;
 //    }
 
+    @Override
     public void sayHi()
     {
-        services.sayHi();
+        String test = hello.say();
+        System.out.println(test);
     }
 
 }
