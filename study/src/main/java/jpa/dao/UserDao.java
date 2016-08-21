@@ -18,39 +18,35 @@ public class UserDao extends AbstractJPADao<User> implements IUser
     @PersistenceContext
     private EntityManager em;
 
-    public UserDao()
-    {
+    public UserDao() {
         super();
         setClazz(User.class);
     }
 
     @Override
-    public void sayHi()
-    {
+    public void sayHi() {
         System.out.println("Hello User, Son of bitch!!");
     }
 
     @Override
-    public List<User> findByName(String name)
-    {
+    public List<User> findByName(String name) {
         Query rs = em.createQuery("SELECT u FROM User u WHERE u.username=?1");
         List<User> users = rs.setParameter(1,name).getResultList();
         return users;
     }
 
     @Override
-    public String getPassword(String username)
-    {
-        List<User> user = findByName(username);
-        if (null != user)
-        {
-
+    public String getPassword(String username) {
+        List<User> findUser = findByName(username);
+        String pass = null;
+        if (null != findUser) {
+           for (User user : findUser){
+                pass = user.getPassword();
+           }
+            return  pass;
+        } else {
+            return pass;
         }
-        else
-        {
-            return "";
-        }
-        return "";
     }
 
 

@@ -18,36 +18,32 @@ public class ServiceUser
     @Autowired
     private IUser user;
 
-    public void sayHi()
-    {
+    public void sayHi() {
         user.sayHi();
     }
 
-    public List<User> getAll()
-    {
+    public List<User> getAll() {
         return user.findAll();
     }
 
-    public void addUser(String username, String password)
-    {
+    public void addUser(String username, String password) {
         User userNew = new User();
         userNew.setUsername(username);
         userNew.setPassword(password);
         user.create(userNew);
     }
 
-    public boolean isExist(String username)
-    {
+    public boolean isExist(String username) {
         List<User> userExist = user.findByName(username);
         Integer num = userExist.size();
-        if (num > 0)
-        {
+        if (num > 0) {
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
+    }
 
+    public String getPassword(String username){
+        return user.getPassword(username);
     }
 }
