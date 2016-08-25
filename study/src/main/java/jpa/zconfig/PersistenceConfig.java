@@ -46,12 +46,14 @@ public class PersistenceConfig
         return transactionManager;
     }
 
+    //transfer jpa exception to spring container
     @Bean
     public PersistenceExceptionTranslationPostProcessor exceptionTranslationPostProcessor()
     {
         return new PersistenceExceptionTranslationPostProcessor();
     }
 
+    //datasource
     @Bean
     public DataSource MysqlDS()
     {

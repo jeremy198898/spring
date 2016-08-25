@@ -19,4 +19,6 @@ public interface IUser extends IRepository<User>
 
     String getPassword(String username);
 
+    Long count();
+
 }

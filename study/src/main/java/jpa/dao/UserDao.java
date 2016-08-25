@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -25,7 +26,7 @@ public class UserDao extends AbstractJPADao<User> implements IUser
 
     @Override
     public void sayHi() {
-        System.out.println("Hello User, Son of bitch!!");
+        System.out.println("Hello user, you son of bitch!!");
     }
 
     @Override
@@ -47,6 +48,13 @@ public class UserDao extends AbstractJPADao<User> implements IUser
         } else {
             return pass;
         }
+    }
+
+    @Override
+    public Long count() {
+        TypedQuery<Long> query = em.createQuery("SELECT COUNT(u) FROM User u",Long.class);
+        long count = query.getSingleResult();
+        return count;
     }
 
 

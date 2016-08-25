@@ -28,17 +28,17 @@ public class JpaTest
 //        serviceUser.sayHi();
 //    }
 
-    @Test
-    public void add() {
-        String username = "张志德13326";
-        boolean exist = serviceUser.isExist(username);
-        if(!exist) {
-            serviceUser.addUser(username, "31574322zhang");
-            System.out.println("User have been successfully added!");
-        } else {
-            System.out.println("用户已经存在");
-        }
-    }
+//    @Test
+//    public void add() {
+//        String username = "张志德13326";
+//        boolean exist = serviceUser.isExist(username);
+//        if(!exist) {
+//            serviceUser.addUser(username, "31574322zhang");
+//            System.out.println("User have been successfully added!");
+//        } else {
+//            System.out.println("用户已经存在");
+//        }
+//    }
 
 //    @Test
 //    public void x()
@@ -57,10 +57,18 @@ public class JpaTest
 //        System.out.println(users.size());
 //    }
 
+//    @Test
+//    public void t(){
+//        String test = serviceUser.getPassword("张志德13");
+//        System.out.println(test);
+//    }
+
     @Test
-    public void t(){
-        String test = serviceUser.getPassword("张志德13");
-        System.out.println(test);
+    public void xx(){
+        long x = serviceUser.count();
+        int y = (int)x;
+        //Integer x = new Integer(10);
+        System.out.println(y);
     }
 
 }

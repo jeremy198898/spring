@@ -46,4 +46,8 @@ public class ServiceUser
     public String getPassword(String username){
         return user.getPassword(username);
     }
+
+    public long count(){
+        return user.count();
+    }
 }
