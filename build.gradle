@@ -5,7 +5,8 @@ subprojects{
 
     //apply plugin: 'idea'
 	repositories {
-		mavenCentral()
+		//mavenCentral()
+		maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
 	}
 
     //解决Gradle编译时出现： 编码GBK的不可映射字符
@@ -24,7 +25,6 @@ subprojects{
 
 		// https://mvnrepository.com/artifact/org.springframework/spring-aop
 		compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
-
 
 		// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
 		compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.1.Final'
