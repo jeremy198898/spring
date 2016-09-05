@@ -1,8 +1,6 @@
-apply plugin: 'java'
-//apply plugin: 'idea'
-	
-//解决Gradle编译时出现： 编码GBK的不可映射字符
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-
 dependencies{
+
+    // https://mvnrepository.com/artifact/com.qcloud/cos_api
+    compile group: 'com.qcloud', name: 'cos_api', version: '3.3'
+
 }
