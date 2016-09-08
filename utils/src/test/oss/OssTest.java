@@ -17,7 +17,7 @@ public class OssTest {
 
         //必须加 左斜杠
         String cosFilePath = "/test/gods.xls";
-        String localFilePath = "D:\\poi-excel\\goods.xls";
+        String localFilePath = "D:\\poi-excel\\good.xls";
 
         System.out.println(localFilePath);
 
