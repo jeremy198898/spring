@@ -27,7 +27,10 @@ subprojects{
 		compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
 
 		// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
-		compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.1.Final'
+		compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.2.Final'
+
+		// https://mvnrepository.com/artifact/org.hibernate/hibernate-infinispan
+		compile group: 'org.hibernate', name: 'hibernate-infinispan', version: '5.2.2.Final'
 
 		// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 		//compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'

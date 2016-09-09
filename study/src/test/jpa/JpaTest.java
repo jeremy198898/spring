@@ -40,15 +40,15 @@ public class JpaTest
 //        }
 //    }
 
-//    @Test
-//    public void x()
-//    {
-//        List<User> users = serviceUser.getAll();
-//        for (User user:users)
-//        {
-//            System.out.println(user.getUsername());
-//        }
-//    }
+    @Test
+    public void x()
+    {
+        List<User> users = serviceUser.getAll();
+        for (User user:users)
+        {
+            System.out.println(user.getUsername());
+        }
+    }
 
 //    @Test
 //    public void y()
@@ -63,12 +63,12 @@ public class JpaTest
 //        System.out.println(test);
 //    }
 
-    @Test
-    public void xx(){
-        long x = serviceUser.count();
-        int y = (int)x;
-        //Integer x = new Integer(10);
-        System.out.println(y);
-    }
+//    @Test
+//    public void xx(){
+//        long x = serviceUser.count();
+//        int y = (int)x;
+//        //Integer x = new Integer(10);
+//        System.out.println(y);
+//    }
 
 }
