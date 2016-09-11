@@ -31,6 +31,7 @@ public class JpaTest
 //    @Test
 //    public void add() {
 //        String username = "张志德13326";
+//        int i = 1;
 //        boolean exist = serviceUser.isExist(username);
 //        if(!exist) {
 //            serviceUser.addUser(username, "31574322zhang");
@@ -41,14 +42,24 @@ public class JpaTest
 //    }
 
     @Test
-    public void x()
-    {
-        List<User> users = serviceUser.getAll();
-        for (User user:users)
-        {
-            System.out.println(user.getUsername());
+    public void add1() {
+        String username = "张志德13329999999";
+        for (int i=2500 ; i<3000; i++) {
+            String usernamer = username+i;
+            serviceUser.addUser(usernamer, "31574322987456zhang"+i);
+            System.out.println("User have been successfully added!"+i);
         }
     }
+
+//    @Test
+//    public void x()
+//    {
+//        List<User> users = serviceUser.getAll();
+//        for (User user:users)
+//        {
+//            System.out.println(user.getUsername());
+//        }
+//    }
 
 //    @Test
 //    public void y()
