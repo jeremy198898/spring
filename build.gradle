@@ -26,6 +26,9 @@ subprojects{
 		// https://mvnrepository.com/artifact/org.springframework/spring-aop
 		compile group: 'org.springframework', name: 'spring-aop', version: '4.3.2.RELEASE'
 
+		// https://mvnrepository.com/artifact/org.springframework/spring-jms
+		compile group: 'org.springframework', name: 'spring-jms', version: '4.3.2.RELEASE'
+
 		// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
 		compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.2.Final'
 
@@ -40,6 +43,9 @@ subprojects{
 
 		// https://mvnrepository.com/artifact/org.springframework/spring-orm
 		compile group: 'org.springframework', name: 'spring-orm', version: '4.3.2.RELEASE'
+
+		// https://mvnrepository.com/artifact/org.apache.activemq/activemq-all
+		compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.14.0'
 
 	}
 }

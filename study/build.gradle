@@ -7,5 +7,4 @@ dependencies{
     // https://mvnrepository.com/artifact/org.infinispan/infinispan-spring4-embedded
     compile group: 'org.infinispan', name: 'infinispan-spring4-embedded', version: '8.2.4.Final'
 
-
 }

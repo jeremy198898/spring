@@ -41,7 +41,6 @@ public class ConnectMysql {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            ;
         }
     }
 
