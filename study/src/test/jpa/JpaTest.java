@@ -22,11 +22,11 @@ public class JpaTest
     @Autowired
     private ServiceUser serviceUser;
 
-//    @Test
-//    public void test()
-//    {
-//        serviceUser.sayHi();
-//    }
+    @Test
+    public void test()
+    {
+        serviceUser.sayHi();
+    }
 
 //    @Test
 //    public void add() {
@@ -41,15 +41,15 @@ public class JpaTest
 //        }
 //    }
 
-    @Test
-    public void add1() {
-        String username = "张志德13329999999";
-        for (int i=2500 ; i<3000; i++) {
-            String usernamer = username+i;
-            serviceUser.addUser(usernamer, "31574322987456zhang"+i);
-            System.out.println("User have been successfully added!"+i);
-        }
-    }
+//    @Test
+//    public void add1() {
+//        String username = "张志德13329999999";
+//        for (int i=2500 ; i<3000; i++) {
+//            String usernamer = username+i;
+//            serviceUser.addUser(usernamer, "31574322987456zhang"+i);
+//            System.out.println("User have been successfully added!"+i);
+//        }
+//    }
 
 //    @Test
 //    public void x()
@@ -64,7 +64,7 @@ public class JpaTest
 //    @Test
 //    public void y()
 //    {
-//        List<User> users = serviceUser.findByName("zd");
+//        List<User> users = serviceUser.getPassword
 //        System.out.println(users.size());
 //    }
 

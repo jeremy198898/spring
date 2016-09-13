@@ -15,12 +15,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = {BeanConfig.class})
 public class TestService
 {
-    @Autowired
-    private IService test;
-
-    @Test
-    public void say()
-    {
-        test.sayHi();
-    }
+//    @Autowired
+//    private IService test;
+//
+//    @Test
+//    public void say()
+//    {
+//        test.sayHi();
+//    }
 }

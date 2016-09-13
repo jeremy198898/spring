@@ -76,23 +76,23 @@ public class PersistenceConfig
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57InnoDBDialect");
         properties.setProperty("hibernate.show_sql", "true");
-        properties.setProperty("hibernate.cache.use_second_level_cache", "true");
-        properties.setProperty("hibernate.cache.use_query_cache", "true");
-        properties.setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.infinispan.InfinispanRegionFactory");
-        properties.setProperty("hibernate.cache.use_second_level_cache", "LRU");
-        properties.setProperty("hibernate.cache.infinispan.entity.eviction.max_entries", "5000");
-        properties.setProperty("hibernate.cache.infinispan.entity.expiration.max_idle", "30000");
+        //properties.setProperty("hibernate.cache.use_second_level_cache", "true");
+        //properties.setProperty("hibernate.cache.use_query_cache", "true");
+        //properties.setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.infinispan.InfinispanRegionFactory");
+        //properties.setProperty("hibernate.cache.use_second_level_cache", "LRU");
+        //properties.setProperty("hibernate.cache.infinispan.entity.eviction.max_entries", "5000");
+        //properties.setProperty("hibernate.cache.infinispan.entity.expiration.max_idle", "30000");
         return properties;
     }
 
-    @Bean
-    public CacheManager cacheManager(){
-        SpringEmbeddedCacheManager secm = new SpringEmbeddedCacheManager(infinispan());
-        return secm;
-    }
-
-    private EmbeddedCacheManager infinispan(){
-        return new DefaultCacheManager();
-    }
+//    @Bean
+//    public CacheManager cacheManager(){
+//        SpringEmbeddedCacheManager secm = new SpringEmbeddedCacheManager(infinispan());
+//        return secm;
+//    }
+//
+//    private EmbeddedCacheManager infinispan(){
+//        return new DefaultCacheManager();
+//    }
 
 }
