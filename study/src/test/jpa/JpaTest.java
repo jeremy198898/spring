@@ -22,11 +22,11 @@ public class JpaTest
     @Autowired
     private ServiceUser serviceUser;
 
-    @Test
-    public void test()
-    {
-        serviceUser.sayHi();
-    }
+//    @Test
+//    public void test()
+//    {
+//        serviceUser.sayHi();
+//    }
 
 //    @Test
 //    public void add() {
