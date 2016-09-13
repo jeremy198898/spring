@@ -1,9 +1,5 @@
 package jpa.zconfig;
 
-import org.infinispan.manager.DefaultCacheManager;
-import org.infinispan.manager.EmbeddedCacheManager;
-import org.infinispan.spring.provider.SpringEmbeddedCacheManager;
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +21,6 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableCaching
 public class PersistenceConfig
 {
         @Bean
