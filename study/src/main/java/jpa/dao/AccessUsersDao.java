@@ -4,6 +4,7 @@ import jpa.entity.AccessUsers;
 import jpa.interfaces.IAccessUser;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Cacheable;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -33,6 +34,7 @@ public class AccessUsersDao extends AbstractJPADao<jpa.entity.AccessUsers> imple
         System.out.println(l +"------------->>");
 
         Query rs = em.createQuery("select u from AccessUsers u");
+        rs.setHint("org.hibernate.cacheable", true);
 
         List<AccessUsers> users = rs.getResultList();
 

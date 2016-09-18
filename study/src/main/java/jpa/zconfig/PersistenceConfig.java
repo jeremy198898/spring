@@ -83,6 +83,8 @@ public class PersistenceConfig
         properties.setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.infinispan.InfinispanRegionFactory");
         properties.setProperty("hibernate.cache.use_second_level_cache", "LRU");
 
+        properties.setProperty("hibernate.generate_statistics", "true");
+
         //properties.setProperty("hibernate.cache.infinispan.entity.eviction.max_entries", "5000");
         //properties.setProperty("hibernate.cache.infinispan.entity.expiration.max_idle", "30000");
         return properties;
