@@ -4,10 +4,7 @@ import jpa.entity.AccessUsers;
 import jpa.interfaces.IAccessUser;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Cacheable;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -16,6 +13,7 @@ import java.util.List;
 @Repository
 public class AccessUsersDao extends AbstractJPADao<jpa.entity.AccessUsers> implements IAccessUser{
 
+    @PersistenceUnit(name = "")
     @PersistenceContext
     private EntityManager em;
 

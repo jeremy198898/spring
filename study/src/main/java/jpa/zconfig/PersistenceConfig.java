@@ -44,6 +44,17 @@ public class PersistenceConfig
             return em;
         }
 
+//    @Bean
+//    public LocalContainerEntityManagerFactoryBean pgsqlManagerFactory(){
+//        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+//        em.setDataSource(PgsqlDS());
+//
+//        em.setPersistenceUnitName("pgsql");
+//        em.setPackagesToScan();
+//
+//        return em;
+//    }
+
     @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf)
     {
@@ -68,6 +79,14 @@ public class PersistenceConfig
         ds.setUrl("jdbc:mysql://140.206.185.206:3306/zzd?useSSL=false&useUnicode=true&characterEncoding=utf-8");
         ds.setUsername("jeremy");
         ds.setPassword("e3,t6,P?");
+        return ds;
+    }
+
+    @Bean
+    public DataSource PgsqlDS(){
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+
+        ds.setDriverClassName("");
         return ds;
     }
 
