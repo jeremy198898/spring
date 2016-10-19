@@ -96,12 +96,13 @@ public class PersistenceConfig
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL57InnoDBDialect");
         properties.setProperty("hibernate.show_sql", "true");
 
-        //for caching
+        //for caching(query cache is different from 2lc (second level cache) cache)
         properties.setProperty("hibernate.cache.use_second_level_cache", "true");
         properties.setProperty("hibernate.cache.use_query_cache", "true");
         properties.setProperty("hibernate.cache.region.factory_class", "org.hibernate.cache.infinispan.InfinispanRegionFactory");
         properties.setProperty("hibernate.cache.use_second_level_cache", "LRU");
 
+        //for performance tuning
         properties.setProperty("hibernate.generate_statistics", "true");
 
         //properties.setProperty("hibernate.cache.infinispan.entity.eviction.max_entries", "5000");
